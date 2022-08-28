@@ -30,7 +30,7 @@ namespace CRUD_NetRazor.Migrations
 
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"), 1L, 1);
 
-                    b.Property<string>("Cousre_name")
+                    b.Property<string>("Course_name")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 

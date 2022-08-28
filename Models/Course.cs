@@ -8,7 +8,7 @@ namespace CRUD_NetRazor.Models
         public int Id { get; set; }
         [Required]
         [Display(Name ="Nombre")]
-        public string Cousre_name { get; set; } = string.Empty;
+        public string Course_name { get; set; } = string.Empty;
         [Display(Name = "Cantidad de Clases")]
         public int Number_of_classes { get; set; }
         [Display(Name = "Precio")]

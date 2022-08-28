@@ -15,7 +15,7 @@ namespace CRUD_NetRazor.Migrations
                 {
                     Id = table.Column<int>(type: "int", nullable: false)
                         .Annotation("SqlServer:Identity", "1, 1"),
-                    Cousre_name = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    Course_name = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     Number_of_classes = table.Column<int>(type: "int", nullable: false),
                     Price = table.Column<double>(type: "float", nullable: false),
                     Creation_date = table.Column<DateTime>(type: "datetime2", nullable: false)

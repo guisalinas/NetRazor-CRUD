@@ -1,0 +1,57 @@
+﻿@page
+@model CRUD_NetRazor.Pages.CoursesView.IndexModel
+@{
+    ViewData["Title"] = "Lista de Cursos";
+}
+
+<div class="card">
+    <div class="card-header">
+        <div class="row">
+            <div class="col-sm-6">
+                <h2 class="text-info">LISTA DE CURSOS</h2>
+            </div>
+            <div class="col-sm-6 btn-new">
+                <a asp-page="Create" class="btn btn-dark"> Nuevo Curso</a>
+            </div>
+        </div>
+    </div>
+    <div class="card-body">
+        @if (Model.Courses.Count() > 0)
+        {
+            <table class="table table-hover">
+            <thead>
+                <tr>
+                  <th scope="col">@Html.DisplayNameFor(m => m.Courses.First().Id)</th>
+                  <th scope="col">@Html.DisplayNameFor(m => m.Courses.First().Course_name)</th>
+                  <th scope="col">@Html.DisplayNameFor(m => m.Courses.First().Number_of_classes)</th>
+                  <th scope="col">@Html.DisplayNameFor(m => m.Courses.First().Price)</th>
+                  <th scope="col">@Html.DisplayNameFor(m => m.Courses.First().Creation_date)</th>
+                  <th scope="col">Acciones</th>
+                </tr>
+              </thead>
+              <tbody>
+                  @foreach(var i in Model.Courses)
+                        {
+                        <tr>
+                        
+                            <th scope="row">@Html.DisplayFor(m => i.Id)</th>
+                                <td>@Html.DisplayFor(m => i.Course_name)</td>
+                                <td>@Html.DisplayFor(m => i.Number_of_classes)</td>
+                                <td>@Html.DisplayFor(m => i.Price)</td>
+                                <td>@Html.DisplayFor(m => i.Creation_date)</td>
+                                <td>
+                                    <a asp-route-id="@i.Id" asp-page="Edit" class="btn btn-dark"> Editar </a>
+                                    <button asp-page-handler="Delete" asp-route-id="@i.Id" onclick="return confirm('¿Está seguro de eliminar este registro?')" class="btn btn-dark">Eliminar</button>    
+                                </td>
+                        </tr>
+                        }
+              </tbody>
+            </table>
+        } else
+        {
+            <p>No existen cursos disponibles</p>
+        }
+
+        
+    </div>
+</div>

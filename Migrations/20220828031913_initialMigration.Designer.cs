@@ -12,7 +12,7 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace CRUD_NetRazor.Migrations
 {
     [DbContext(typeof(AppDBContext))]
-    [Migration("20220827193802_initialMigration")]
+    [Migration("20220828031913_initialMigration")]
     partial class initialMigration
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -32,7 +32,7 @@ namespace CRUD_NetRazor.Migrations
 
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"), 1L, 1);
 
-                    b.Property<string>("Cousre_name")
+                    b.Property<string>("Course_name")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
