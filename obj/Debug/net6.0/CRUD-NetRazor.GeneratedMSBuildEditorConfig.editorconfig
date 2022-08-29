@@ -15,6 +15,10 @@ build_property.GenerateRazorMetadataSourceChecksumAttributes =
 build_property.MSBuildProjectDirectory = C:\Users\guill\source\repos\CRUD-NetRazor
 build_property._RazorSourceGeneratorDebug = 
 
+[C:/Users/guill/source/repos/CRUD-NetRazor/Pages/CoursesView/CreateCourse.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQ291cnNlc1ZpZXdcQ3JlYXRlQ291cnNlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
 [C:/Users/guill/source/repos/CRUD-NetRazor/Pages/CoursesView/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQ291cnNlc1ZpZXdcSW5kZXguY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
