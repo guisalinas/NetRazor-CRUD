@@ -10,5 +10,7 @@ namespace CRUD_NetRazor.DBContext
                 
         }
         public DbSet<Course> Course { get; set; }
+        public DbSet<Professor> Professor { get; set; }
+        public DbSet<Student> Student { get; set; }
     }
 }
