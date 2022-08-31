@@ -1,0 +1,94 @@
+﻿@page
+@model CRUD_NetRazor.Pages.StudentsView.EditStudentModel
+@{
+    ViewData["Title"] = "Editar Alumno";
+}
+<div class="card">
+    <div class="card-header">
+        <div class="row">
+            <div class="col-sm-6">
+                <h2 class="text-info">EDITAR ALUMNO</h2>
+            </div>
+            <div class="col-sm-6 btn-new">
+                <a asp-page="CreateStudent" class="btn btn-dark"> Nuevo Alumno</a>
+            </div>
+        </div>
+    </div>
+    <div class="card-body">
+       <form method="post">
+           <input type="hidden" asp-for="Student.Id"/> 
+           <div asp-validation-summary="ModelOnly" class="text-danger">
+           </div>
+           <div class="container" style="padding:30px">
+                <div class="form-group">
+                    <div class="row">
+                        <div class="col-sm-2">
+                            <label asp-for="Student.Name"></label>
+                        </div>
+                        <div class="col-sm-6">
+                            <input asp-for="Student.Name" class="form-control"></>
+                        </div>
+                        <span asp-validation-for="Student.Name" class="text-danger"></span>
+                    </div>
+                    <div class="row">
+                        <div class="col-sm-2">
+                            <label asp-for="Student.Surname"></label>
+                        </div>
+                        <div class="col-sm-6">
+                            <input asp-for="Student.Surname" class="form-control"></>
+                        </div>
+                        <span asp-validation-for="Student.Surname" class="text-danger"></span>
+                    </div>
+                    <div class="row">
+                        <div class="col-sm-2">
+                            <label asp-for="Student.Date_birth"></label>
+                        </div>
+                        <div class="col-sm-6">
+                            <input asp-for="Student.Date_birth" class="form-control"></>
+                        </div>
+                        <span asp-validation-for="Student.Date_birth" class="text-danger"></span>
+                    </div>                    
+                </div>
+                 <div class="row">
+                        <div class="col-sm-2">
+                            <label asp-for="Student.number_of_courses"></label>
+                        </div>
+                        <div class="col-sm-6">
+                            <input asp-for="Student.number_of_courses" class="form-control"></>
+                        </div>
+                        <span asp-validation-for="Student.number_of_courses" class="text-danger"></span>
+                    </div>
+                 <div class="row">
+                        <div class="col-sm-2">
+                            <label asp-for="Student.Admission_date"></label>
+                        </div>
+                        <div class="col-sm-6">
+                            <input asp-for="Student.Admission_date" class="form-control"></>
+                        </div>
+                        <span asp-validation-for="Student.Admission_date" class="text-danger"></span>
+                    </div>
+                 <div class="row">
+                        <div class="col-sm-2">
+                            <label asp-for="Student.Admission_hour"></label>
+                        </div>
+                        <div class="col-sm-6">
+                            <input asp-for="Student.Admission_hour" class="form-control"></>
+                        </div>
+                        <span asp-validation-for="Student.Admission_hour" class="text-danger"></span>
+                    </div>
+                  <div class="row">
+                        <div class="col-sm-2">
+                            <label asp-for="Student.Eggres_date"></label>
+                        </div>
+                        <div class="col-sm-6">
+                            <input asp-for="Student.Eggres_date" class="form-control"></>
+                        </div>
+                    </div>
+                    <div class="d-grid gap-2 d-md-flex justify-content-md-end">
+                    <input type="submit" class="btn btn-dark" value="Editar"/>
+                    <a asp-page="Index" class="btn btn-dark">Cancelar</a>
+                </div>
+           </div>
+       </form>
+    </div>
+</div>

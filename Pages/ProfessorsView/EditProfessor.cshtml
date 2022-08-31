@@ -1,7 +1,7 @@
 ﻿@page
-@model CRUD_NetRazor.Pages.ProfessorsView.CreateProfessorModel
+@model CRUD_NetRazor.Pages.ProfessorsView.EditProfessorModel
 @{
-     ViewData["Title"] = "Nuevo Profesor";
+    ViewData["Title"] = "Editar Profesor";
 }
 
 <div class="card">
@@ -68,8 +68,8 @@
                         </div>
                         <span asp-validation-for="Professor.Admission_date" class="text-danger"></span>
                     </div>
-                  <div class="d-grid gap-2 d-md-flex justify-content-md-end">
-                    <input type="submit" class="btn btn-dark" value="Crear"/>
+                <div class="d-grid gap-2 d-md-flex justify-content-md-end">
+                    <input type="submit" class="btn btn-dark" value="Editar"/>
                     <a asp-page="Index" class="btn btn-dark">Cancelar</a>
                 </div>
            </div>

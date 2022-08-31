@@ -8,7 +8,7 @@
     <div class="card-header">
         <div class="row">
             <div class="col-sm-6">
-                <h2 class="text-info">LISTA DE ALUMNOS</h2>
+                <h2 class="text-info">LISTA DE PROFESORES</h2>
             </div>
             <div class="col-sm-6 btn-new">
                 <a asp-page="CreateProfessor" class="btn btn-dark"> Nuevo Profesor</a>
@@ -42,7 +42,7 @@
                                 <td>@Html.DisplayFor(m => i.Specialty)</td>
                                 <td>@Html.DisplayFor(m => i.Admission_date)</td>
                                 <td>
-                                    <a asp-route-id="@i.Id" asp-page="Edit" class="btn btn-dark"> Editar </a>
+                                    <a asp-route-id="@i.Id" asp-page="EditProfessor" class="btn btn-dark"> Editar </a>
                                     <button asp-page-handler="Delete" asp-route-id="@i.Id" onclick="return confirm('¿Está seguro de eliminar este registro?')" class="btn btn-dark">Eliminar</button>    
                                 </td>
                         </tr>

@@ -21,5 +21,10 @@ namespace CRUD_NetRazor.Pages.CoursesView
         {
             Courses = await _context.Course.ToListAsync();
         }
+
+        public async Task OnPostDelete(int Id)
+        {
+
+        }
     }
 }

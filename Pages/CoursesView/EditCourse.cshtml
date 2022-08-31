@@ -1,0 +1,60 @@
+﻿@page
+@model CRUD_NetRazor.Pages.CoursesView.EditCourseModel
+@{
+    ViewData["Title"] = "Editar Curso";
+}
+
+<div class="card">
+    <div class="card-header">
+        <div class="row">
+            <div class="col-sm-6">
+                <h2 class="text-info">EDITAR CURSO</h2>
+            </div>
+            <div class="col-sm-6 btn-new">
+                <a asp-page="CreateCourse" class="btn btn-dark"> Nuevo Curso</a>
+            </div>
+        </div>
+    </div>
+    <div class="card-body">
+       <form method="post">
+           <input type="hidden" asp-for="Course.Id"/> 
+           <div asp-validation-summary="ModelOnly" class="text-danger">
+           </div>
+           <div class="container" style="padding:30px">
+                <div class="form-group">
+                    <div class="row">
+                        <div class="col-sm-2">
+                            <label asp-for="Course.Course_name"></label>
+                        </div>
+                        <div class="col-sm-6">
+                            <input asp-for="Course.Course_name" class="form-control"></>
+                        </div>
+                        <span asp-validation-for="Course.Course_name" class="text-danger"></span>
+                    </div>
+                    <div class="row">
+                        <div class="col-sm-2">
+                            <label asp-for="Course.Number_of_classes"></label>
+                        </div>
+                        <div class="col-sm-6">
+                            <input asp-for="Course.Number_of_classes" class="form-control"></>
+                        </div>
+                        <span asp-validation-for="Course.Number_of_classes" class="text-danger"></span>
+                    </div>
+                    <div class="row">
+                        <div class="col-sm-2">
+                            <label asp-for="Course.Price"></label>
+                        </div>
+                        <div class="col-sm-6">
+                            <input asp-for="Course.Price" class="form-control"></>
+                        </div>
+                        <span asp-validation-for="Course.Price" class="text-danger"></span>
+                    </div>                    
+                </div>
+                <div class="d-grid gap-2 d-md-flex justify-content-md-end">
+                    <input type="submit" class="btn btn-dark" value="Editar"/>
+                    <a asp-page="Index" class="btn btn-dark">Cancelar</a>
+                </div>
+           </div>
+       </form>
+    </div>
+</div>
