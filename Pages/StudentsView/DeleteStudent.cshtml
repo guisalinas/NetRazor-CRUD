@@ -1,18 +1,17 @@
 ﻿@page
-@model CRUD_NetRazor.Pages.StudentsView.EditStudentModel
+@model CRUD_NetRazor.Pages.StudentsView.DeleteStudentModel
 @{
-    ViewData["Title"] = "Editar Alumno";
+    ViewData["Title"] = "Eliminar Alumno";
 }
-
 
 <div class="card">
     <div class="card-header">
         <div class="row">
             <div class="col-sm-6">
-                <h2 class="text-info">NUEVO ESTUDIANTE</h2>
+                <h2 class="text-info">ELIMINAR ALUMNO</h2>
             </div>
             <div class="col-sm-6 btn-new">
-                <a asp-page="CreateStudent" class="btn btn-dark"> Nuevo ESTUDIANTE</a>
+                <a asp-page="CreateStudent" class="btn btn-dark"> Nuevo Alumno</a>
             </div>
         </div>
     </div>
@@ -69,7 +68,7 @@
                         </div>
                         <span asp-validation-for="Student.Admission_date" class="text-danger"></span>
                     </div>
-                     <div class="row">
+                 <div class="row">
                         <div class="col-sm-2">
                             <label asp-for="Student.Admission_hour"></label>
                         </div>
@@ -78,17 +77,16 @@
                         </div>
                         <span asp-validation-for="Student.Admission_hour" class="text-danger"></span>
                     </div>
-                     <div class="row">
+                  <div class="row">
                         <div class="col-sm-2">
                             <label asp-for="Student.Eggres_date"></label>
                         </div>
                         <div class="col-sm-6">
                             <input asp-for="Student.Eggres_date" class="form-control"></>
                         </div>
-                        <span asp-validation-for="Student.Eggres_date" class="text-danger"></span>
                     </div>
-                <div class="d-grid gap-2 d-md-flex justify-content-md-end">
-                    <input type="submit" class="btn btn-dark" value="Guardar"/>
+                    <div class="d-grid gap-2 d-md-flex justify-content-md-end">
+                    <input type="submit" class="btn btn-dark" onclick="Está seguro de eliminar este registro?" value="Eliminar"/>
                     <a asp-page="Index" class="btn btn-dark">Cancelar</a>
                 </div>
            </div>

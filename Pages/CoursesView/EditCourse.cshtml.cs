@@ -17,6 +17,9 @@ namespace CRUD_NetRazor.Pages.CoursesView
         [BindProperty]
         public Course Course { get; set; }
 
+        [TempData]
+        public string Message { get; set; }
+
         public async void OnGet(int Id)
         {
             Course = await _context.Course.FindAsync(Id);
@@ -32,6 +35,7 @@ namespace CRUD_NetRazor.Pages.CoursesView
                 CourseDB.Number_of_classes = Course.Number_of_classes;
                 CourseDB.Price = Course.Price;
                 await _context.SaveChangesAsync();
+                Message = "Bien! El registro se modificó con éxito";
                 return RedirectToPage("Index");
             }
 

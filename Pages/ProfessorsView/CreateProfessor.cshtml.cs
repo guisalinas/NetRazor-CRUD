@@ -16,6 +16,8 @@ namespace CRUD_NetRazor.Pages.ProfessorsView
 
         [BindProperty]
         public Professor Professor { get; set; }
+        [TempData]
+        public string Message { get; set; }
         public async Task<IActionResult> OnPost()
         {
             if (!ModelState.IsValid)
@@ -25,6 +27,7 @@ namespace CRUD_NetRazor.Pages.ProfessorsView
 
             _context.Add(Professor);
             await _context.SaveChangesAsync();
+            Message = "Bien! Registro creado correctamente";
             return RedirectToPage("Index");
 
         }

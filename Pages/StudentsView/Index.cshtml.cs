@@ -17,6 +17,9 @@ namespace CRUD_NetRazor.Pages.StudentsView
 
         public IEnumerable<Student> Students { get; set; }
 
+        [TempData]
+        public string Message { get; set; }
+
         public async Task OnGet()
         {
             Students = await _context.Student.ToListAsync();

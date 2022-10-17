@@ -16,6 +16,8 @@ namespace CRUD_NetRazor.Pages.StudentsView
 
         [BindProperty]
         public Student Student { get; set; }
+        [TempData]
+        public string Message { get; set; }
         public async Task<IActionResult> OnPost()
         {
             if (!ModelState.IsValid)
@@ -25,6 +27,7 @@ namespace CRUD_NetRazor.Pages.StudentsView
 
             _context.Add(Student);
             await _context.SaveChangesAsync();
+            Message = "Bien! El registro se creó correctamente";
             return RedirectToPage("Index");
 
         }

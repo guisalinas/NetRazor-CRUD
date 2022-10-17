@@ -15,7 +15,9 @@ namespace CRUD_NetRazor.Pages.CoursesView
         }
 
         [BindProperty]
-        public Course Course { get; set; } 
+        public Course Course { get; set; }
+        [TempData]
+        public string Message { get; set; }
 
         public async Task<IActionResult> OnPost()
         {
@@ -28,6 +30,7 @@ namespace CRUD_NetRazor.Pages.CoursesView
 
             _context.Add(Course);
             await _context.SaveChangesAsync();
+            Message = "Registro creado correctamente";
             return RedirectToPage("Index");
 
         }

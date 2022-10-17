@@ -17,14 +17,29 @@ namespace CRUD_NetRazor.Pages.CoursesView
 
         public IEnumerable<Course> Courses { get; set; } 
 
+        [TempData]
+        public string Message { get; set; }
+
         public async Task OnGet()
         {
             Courses = await _context.Course.ToListAsync();
         }
-
-        public async Task OnPostDelete(int Id)
+        public async Task<IActionResult> OnPostDelete(int Id)
         {
+            if (ModelState.IsValid)
+            {
+                var CourseDelete = await _context.Course.FindAsync(Id);
+                if (CourseDelete == null)
+                {
+                    return NotFound();
+                }
+                _context.Course.Remove(CourseDelete);
+                await _context.SaveChangesAsync();
+                Message = "El registro se eliminó correctamente";
+                return RedirectToPage("Index");
+            }
 
+            return RedirectToPage("");
         }
     }
 }

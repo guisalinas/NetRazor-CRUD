@@ -5,10 +5,10 @@ using Microsoft.AspNetCore.Mvc.RazorPages;
 
 namespace CRUD_NetRazor.Pages.StudentsView
 {
-    public class EditStudentModel : PageModel
+    public class DeleteStudentModel : PageModel
     {
         private readonly AppDBContext _context;
-        public EditStudentModel(AppDBContext context)
+        public DeleteStudentModel(AppDBContext context)
         {
             _context = context;
         }
@@ -16,34 +16,33 @@ namespace CRUD_NetRazor.Pages.StudentsView
         [BindProperty]
         public Student Student { get; set; }
 
-        [TempData]
-        public string Message { get; set; }
+         [TempData]
+         public string Message { get; set; }
 
         public async void OnGet(int Id)
         {
             Student = await _context.Student.FindAsync(Id);
         }
 
-
         public async Task<IActionResult> OnPost()
         {
             if (ModelState.IsValid)
             {
-                var StudentDB = await _context.Student.FindAsync(Student.Id);
+                var StudentDelete = await _context.Student.FindAsync(Student.Id);
+               
+                if(StudentDelete == null)
+                {
+                    return NotFound();
+                }
 
-                StudentDB.Name = Student.Name;
-                StudentDB.Surname = Student.Surname;
-                StudentDB.Date_birth = Student.Date_birth;
-                StudentDB.number_of_courses = Student.number_of_courses;
-                StudentDB.Admission_hour = Student.Admission_hour;
-                StudentDB.Admission_date = Student.Admission_date;
-                StudentDB.Eggres_date = Student.Eggres_date;
+                StudentDelete.is_eliminated = true;
+                Message = "El registro se eliminó correctamente";
                 await _context.SaveChangesAsync();
-                Message = "Bien! Registro modificado con éxito";
                 return RedirectToPage("Index");
             }
 
             return RedirectToPage("");
         }
+
     }
 }

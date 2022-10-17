@@ -17,6 +17,9 @@ namespace CRUD_NetRazor.Pages.ProfessorsView
         [BindProperty]
         public Professor Professor { get; set; }
 
+        [TempData]
+        public string Message { get; set; }
+
         public async void OnGet(int Id)
         {
             Professor = await _context.Professor.FindAsync(Id);
@@ -32,9 +35,9 @@ namespace CRUD_NetRazor.Pages.ProfessorsView
                 ProfessorDB.Date_birth = Professor.Date_birth;
                 ProfessorDB.Specialty = Professor.Specialty;
                 await _context.SaveChangesAsync();
+                Message = "Bien! El registro se modificó con éxito!";
                 return RedirectToPage("Index");
             }
-
             return RedirectToPage("");
         }
     }

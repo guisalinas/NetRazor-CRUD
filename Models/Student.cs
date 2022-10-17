@@ -27,7 +27,7 @@ namespace CRUD_NetRazor.Models
 
         [Display(Name ="Fech. de Egreso"), DisplayFormat(DataFormatString = "{0: yyyy/mm/dd }")]
         public DateTime Eggres_date { get; set; }
-
-
+        [Required]
+        public bool is_eliminated { get; set; }
     }
 }
