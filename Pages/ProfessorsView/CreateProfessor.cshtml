@@ -8,16 +8,15 @@
     <div class="card-header">
         <div class="row">
             <div class="col-sm-6">
-                <h2 class="text-info">NUEVO PROFESOR</h2>
+                <h2 class="text-secundary">NUEVO PROFESOR</h2>
             </div>
             <div class="col-sm-6 btn-new">
-                <a asp-page="CreateProfessor" class="btn btn-dark"> Nuevo Profesor</a>
+                <a asp-page="CreateProfessor" class="btn btn-secundary"> Nuevo Profesor</a>
             </div>
         </div>
     </div>
-    <div class="card-body">
+ <div class="card-body">
        <form method="post">
-           <input type="hidden" asp-for="Professor.Id"/> 
            <div asp-validation-summary="ModelOnly" class="text-danger">
            </div>
            <div class="container" style="padding:30px">

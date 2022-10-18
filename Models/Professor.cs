@@ -21,5 +21,8 @@ namespace CRUD_NetRazor.Models
 
         [Required, Display(Name = "Fecha de Ingreso"), DisplayFormat(DataFormatString = "{0: yyyy-mm-dd }")]
         public DateTime Admission_date { get; set; }
+
+        [Required]
+        public bool is_eliminated { get; set; }
     }
 }

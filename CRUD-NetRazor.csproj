@@ -8,6 +8,7 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Content Remove="Pages\ProfessorsView\DeleteProfessor.cshtml" />
     <Content Remove="Pages\StudentsView\DeleteStudent.cshtml" />
   </ItemGroup>
 
@@ -25,12 +26,18 @@
   </ItemGroup>
 
   <ItemGroup>
+    <_ContentIncludedByDefault Remove="Pages\ProfessorsView\DeleteProfessor.cshtml" />
     <_ContentIncludedByDefault Remove="Pages\StudentsView\DeleteStudent.cshtml" />
   </ItemGroup>
 
   <ItemGroup>
+    <None Include="Pages\ProfessorsView\DeleteProfessor.cshtml" />
     <None Include="Pages\StudentsView\DeleteStudent.cshtml" />
     <None Include="wwwroot\css\Image\RazorAcademy.png" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <UpToDateCheckInput Remove="Pages\ProfessorsView\DeleteProfessor.cshtml" />
   </ItemGroup>
 
 </Project>

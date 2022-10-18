@@ -1,14 +1,14 @@
 ﻿@page
-@model CRUD_NetRazor.Pages.ProfessorsView.EditProfessorModel
+@model CRUD_NetRazor.Pages.ProfessorsView.DeleteProfessorModel
 @{
-    ViewData["Title"] = "Editar Profesor";
+    ViewData["Title"] = "Eliminar Profesor";
 }
 
 <div class="card">
     <div class="card-header">
         <div class="row">
             <div class="col-sm-6">
-                <h2 class="text-dark">EDITAR PROFESOR</h2>
+                <h2 class="text-secondary">ELIMINAR PROFESOR</h2>
             </div>
             <div class="col-sm-6 btn-new">
                 <a asp-page="CreateProfessor" class="btn btn-dark"> Nuevo Profesor</a>
@@ -68,8 +68,8 @@
                         </div>
                         <span asp-validation-for="Professor.Admission_date" class="text-danger"></span>
                     </div>
-                <div class="d-grid gap-2 d-md-flex justify-content-md-end">
-                    <input type="submit" class="btn btn-dark" value="Guardar"/>
+                    <div class="d-grid gap-2 d-md-flex justify-content-md-end">
+                    <input type="submit" class="btn btn-dark" onclick="Está seguro de eliminar este registro?" value="Eliminar"/>
                     <a asp-page="Index" class="btn btn-dark">Cancelar</a>
                 </div>
            </div>
