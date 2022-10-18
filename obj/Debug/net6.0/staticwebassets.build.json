@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "fzQHHkdBvDYY5dgiZK/MIsJ1/SfzZ3OCufJ4s+OBuKI=",
+  "Hash": "BR883f6trIT6HsEAlyM3cHYAsWXqLeKs07bOzTUnnGU=",
   "Source": "CRUD-NetRazor",
   "BasePath": "_content/CRUD-NetRazor",
   "Mode": "Default",
@@ -51,6 +51,40 @@
       "OriginalItemSpec": "C:\\Users\\guill\\source\\repos\\CRUD-NetRazor\\obj\\Debug\\net6.0\\scopedcss\\projectbundle\\CRUD-NetRazor.bundle.scp.css"
     },
     {
+      "Identity": "C:\\Users\\guill\\source\\repos\\CRUD-NetRazor\\wwwroot\\css\\Image\\favicon.png",
+      "SourceId": "CRUD-NetRazor",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\guill\\source\\repos\\CRUD-NetRazor\\wwwroot\\",
+      "BasePath": "_content/CRUD-NetRazor",
+      "RelativePath": "css/Image/favicon.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\css\\Image\\favicon.png"
+    },
+    {
+      "Identity": "C:\\Users\\guill\\source\\repos\\CRUD-NetRazor\\wwwroot\\css\\Image\\RazorAcademy.png",
+      "SourceId": "CRUD-NetRazor",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\guill\\source\\repos\\CRUD-NetRazor\\wwwroot\\",
+      "BasePath": "_content/CRUD-NetRazor",
+      "RelativePath": "css/Image/RazorAcademy.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\css\\Image\\RazorAcademy.png"
+    },
+    {
       "Identity": "C:\\Users\\guill\\source\\repos\\CRUD-NetRazor\\wwwroot\\css\\site.css",
       "SourceId": "CRUD-NetRazor",
       "SourceType": "Discovered",
@@ -66,23 +100,6 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\css\\site.css"
-    },
-    {
-      "Identity": "C:\\Users\\guill\\source\\repos\\CRUD-NetRazor\\wwwroot\\favicon.ico",
-      "SourceId": "CRUD-NetRazor",
-      "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\guill\\source\\repos\\CRUD-NetRazor\\wwwroot\\",
-      "BasePath": "_content/CRUD-NetRazor",
-      "RelativePath": "favicon.ico",
-      "AssetKind": "All",
-      "AssetMode": "All",
-      "AssetRole": "Primary",
-      "RelatedAsset": "",
-      "AssetTraitName": "",
-      "AssetTraitValue": "",
-      "CopyToOutputDirectory": "Never",
-      "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\favicon.ico"
     },
     {
       "Identity": "C:\\Users\\guill\\source\\repos\\CRUD-NetRazor\\wwwroot\\js\\site.js",

@@ -30,6 +30,7 @@
 
   <ItemGroup>
     <None Include="Pages\StudentsView\DeleteStudent.cshtml" />
+    <None Include="wwwroot\css\Image\RazorAcademy.png" />
   </ItemGroup>
 
 </Project>
