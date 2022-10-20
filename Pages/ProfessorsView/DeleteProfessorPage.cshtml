@@ -1,5 +1,5 @@
 ﻿@page
-@model CRUD_NetRazor.Pages.ProfessorsView.DeleteProfessorModel
+@model CRUD_NetRazor.Pages.ProfessorsView.DeleteProfessorPageModel
 @{
     ViewData["Title"] = "Eliminar Profesor";
 }
@@ -10,17 +10,15 @@
             <div class="col-sm-6">
                 <h2 class="text-secondary">ELIMINAR PROFESOR</h2>
             </div>
-            <div class="col-sm-6 btn-new">
-                <a asp-page="CreateProfessor" class="btn btn-dark"> Nuevo Profesor</a>
-            </div>
         </div>
     </div>
     <div class="card-body">
-       <form method="post">
-           <input type="hidden" asp-for="Professor.Id"/> 
-           <div asp-validation-summary="ModelOnly" class="text-danger">
-           </div>
-           <div class="container" style="padding:30px">
+        <form method="post">
+            <input type="hidden" asp-for="Professor.Id" />
+
+            <div asp-validation-summary="ModelOnly" class="text-danger">
+            </div>
+            <div class="container" style="padding:30px">
                 <div class="form-group">
                     <div class="row">
                         <div class="col-sm-2">
@@ -48,31 +46,31 @@
                             <input asp-for="Professor.Date_birth" class="form-control"></>
                         </div>
                         <span asp-validation-for="Professor.Date_birth" class="text-danger"></span>
-                    </div>                    
+                    </div>
                 </div>
-                 <div class="row">
-                        <div class="col-sm-2">
-                            <label asp-for="Professor.Specialty"></label>
-                        </div>
-                        <div class="col-sm-6">
-                            <input asp-for="Professor.Specialty" class="form-control"></>
-                        </div>
-                        <span asp-validation-for="Professor.Specialty" class="text-danger"></span>
+                <div class="row">
+                    <div class="col-sm-2">
+                        <label asp-for="Professor.Specialty"></label>
                     </div>
-                 <div class="row">
-                        <div class="col-sm-2">
-                            <label asp-for="Professor.Admission_date"></label>
-                        </div>
-                        <div class="col-sm-6">
-                            <input asp-for="Professor.Admission_date" class="form-control"></>
-                        </div>
-                        <span asp-validation-for="Professor.Admission_date" class="text-danger"></span>
+                    <div class="col-sm-6">
+                        <input asp-for="Professor.Specialty" class="form-control"></>
                     </div>
-                    <div class="d-grid gap-2 d-md-flex justify-content-md-end">
-                    <input type="submit" class="btn btn-dark" onclick="Está seguro de eliminar este registro?" value="Eliminar"/>
+                    <span asp-validation-for="Professor.Specialty" class="text-danger"></span>
+                </div>
+                <div class="row">
+                    <div class="col-sm-2">
+                        <label asp-for="Professor.Admission_date"></label>
+                    </div>
+                    <div class="col-sm-6">
+                        <input asp-for="Professor.Admission_date" class="form-control"></>
+                    </div>
+                    <span asp-validation-for="Professor.Admission_date" class="text-danger"></span>
+                </div>
+                <div class="d-grid gap-2 d-md-flex justify-content-md-end">
+                    <input type="submit" class="btn btn-danger" value="Eliminar" onclick="return confirm('¿Está seguro de eliminar este registro?')" />
                     <a asp-page="Index" class="btn btn-dark">Cancelar</a>
                 </div>
-           </div>
-       </form>
+            </div>
+        </form>
     </div>
 </div>

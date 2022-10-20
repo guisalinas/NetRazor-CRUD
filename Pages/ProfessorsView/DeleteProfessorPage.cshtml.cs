@@ -5,10 +5,11 @@ using Microsoft.AspNetCore.Mvc.RazorPages;
 
 namespace CRUD_NetRazor.Pages.ProfessorsView
 {
-    public class DeleteProfessorModel : PageModel
+    public class DeleteProfessorPageModel : PageModel
     {
         private readonly AppDBContext _context;
-        public DeleteProfessorModel(AppDBContext context)
+
+        public DeleteProfessorPageModel(AppDBContext context)
         {
             _context = context;
         }
@@ -23,25 +24,26 @@ namespace CRUD_NetRazor.Pages.ProfessorsView
         {
             Professor = await _context.Professor.FindAsync(Id);
         }
-
         public async Task<IActionResult> OnPost()
         {
             if (ModelState.IsValid)
             {
                 var ProfessorDelete = await _context.Professor.FindAsync(Professor.Id);
 
-                if (ProfessorDelete == null)
+                if(ProfessorDelete == null)
                 {
                     return NotFound();
                 }
 
                 ProfessorDelete.is_eliminated = true;
-                Message = "El registro se eliminó correctamente";
+
                 await _context.SaveChangesAsync();
+                Message = "El registro se eliminó correctamente";
                 return RedirectToPage("Index");
             }
-
             return RedirectToPage("");
         }
     }
 }
+
+

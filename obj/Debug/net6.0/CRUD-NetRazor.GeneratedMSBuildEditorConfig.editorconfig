@@ -43,6 +43,10 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcUHJvZmVzc29yc1ZpZXdcQ3JlYXRlUHJvZmVzc29yLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
+[C:/Users/guill/source/repos/CRUD-NetRazor/Pages/ProfessorsView/DeleteProfessorPage.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcUHJvZmVzc29yc1ZpZXdcRGVsZXRlUHJvZmVzc29yUGFnZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
 [C:/Users/guill/source/repos/CRUD-NetRazor/Pages/ProfessorsView/EditProfessor.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcUHJvZmVzc29yc1ZpZXdcRWRpdFByb2Zlc3Nvci5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
@@ -57,6 +61,10 @@ build_metadata.AdditionalFiles.CssScope =
 
 [C:/Users/guill/source/repos/CRUD-NetRazor/Pages/StudentsView/CreateStudent.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcU3R1ZGVudHNWaWV3XENyZWF0ZVN0dWRlbnQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/guill/source/repos/CRUD-NetRazor/Pages/StudentsView/DeleteStudentPage.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcU3R1ZGVudHNWaWV3XERlbGV0ZVN0dWRlbnRQYWdlLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Users/guill/source/repos/CRUD-NetRazor/Pages/StudentsView/EditStudent.cshtml]

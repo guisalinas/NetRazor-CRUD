@@ -8,11 +8,6 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Content Remove="Pages\ProfessorsView\DeleteProfessor.cshtml" />
-    <Content Remove="Pages\StudentsView\DeleteStudent.cshtml" />
-  </ItemGroup>
-
-  <ItemGroup>
     <PackageReference Include="Microsoft.EntityFrameworkCore" Version="6.0.8" />
     <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="6.0.8" />
     <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="6.0.8">
@@ -22,22 +17,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <UpToDateCheckInput Remove="Pages\StudentsView\DeleteStudent.cshtml" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <_ContentIncludedByDefault Remove="Pages\ProfessorsView\DeleteProfessor.cshtml" />
-    <_ContentIncludedByDefault Remove="Pages\StudentsView\DeleteStudent.cshtml" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <None Include="Pages\ProfessorsView\DeleteProfessor.cshtml" />
-    <None Include="Pages\StudentsView\DeleteStudent.cshtml" />
     <None Include="wwwroot\css\Image\RazorAcademy.png" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <UpToDateCheckInput Remove="Pages\ProfessorsView\DeleteProfessor.cshtml" />
   </ItemGroup>
 
 </Project>

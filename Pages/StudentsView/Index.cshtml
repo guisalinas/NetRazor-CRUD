@@ -55,7 +55,7 @@
                                 <td>@Html.DisplayFor(m => i.Eggres_date)</td>
                                 <td>
                                     <a asp-route-id="@i.Id" asp-page="EditStudent" class="btn btn-dark"> Editar </a>
-                                    <a asp-page-handler="Delete" asp-route-id="@i.Id" onclick="return confirm('¿Está seguro de eliminar este registro?')" class="btn btn-dark">Eliminar</a>
+                                    <a asp-route-id="@i.Id" asp-page="DeleteStudentPage" class="btn btn-dark"> Eliminar </a>
                                 </td>
                             </tr>
                         }

@@ -39,7 +39,6 @@ namespace CRUD_NetRazor.Pages.ProfessorsView
                 Message = "Bien! El registro se modificó con éxito!";
                 return RedirectToPage("Index");
             }
-            Message = "Ops! ocurrió un error!";
             return RedirectToPage("");
         }
     }
